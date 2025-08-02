@@ -34,9 +34,9 @@ import org.jpos.transaction.TxnConstants;
 import org.jpos.util.Log;
 import org.jpos.util.NameRegistrar;
 
-import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import javax.ws.rs.core.UriInfo;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+import jakarta.ws.rs.core.UriInfo;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.LinkedHashMap;

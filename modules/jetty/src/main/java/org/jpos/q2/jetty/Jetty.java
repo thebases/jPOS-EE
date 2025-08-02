@@ -29,6 +29,7 @@ import org.jpos.core.Configuration;
 import org.jpos.core.ConfigurationException;
 import org.jpos.q2.QBeanSupport;
 import org.jpos.security.SensitiveString;
+import org.eclipse.jetty.util.resource.Resource;
 
 public class Jetty extends QBeanSupport implements JettyMBean {
     private String config;
@@ -40,9 +41,11 @@ public class Jetty extends QBeanSupport implements JettyMBean {
         server = new Server();
         StringTokenizer st = new StringTokenizer(config, ", ");
         while (st.hasMoreElements()) {
-            FileInputStream fis = new FileInputStream(st.nextToken());
+            // FileInputStream fis = new FileInputStream(st.nextToken());
             @SuppressWarnings("deprecation")
-            XmlConfiguration xml = new XmlConfiguration(fis);
+            String path = st.nextToken();
+
+XmlConfiguration xml = new XmlConfiguration(Resource.newResource(path));
             xml.configure(server);
             if (keystorePassword != null && 
                     keystorePassword.get() != null && 

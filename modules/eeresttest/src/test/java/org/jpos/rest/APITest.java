@@ -23,8 +23,8 @@ import org.glassfish.jersey.jackson.JacksonFeature;
 import org.jpos.q2.Q2;
 import org.jpos.space.Space;
 
-import javax.ws.rs.client.Client;
-import javax.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.Client;
+import jakarta.ws.rs.client.ClientBuilder;
 
 
 @SuppressWarnings("unused")

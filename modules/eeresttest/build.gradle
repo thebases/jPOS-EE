@@ -5,13 +5,17 @@ apply plugin: 'war'
 dependencies {
     providedCompile project(':modules:eerest')
     providedCompile project(':modules:jetty')
-    providedCompile "javax.ws.rs:javax.ws.rs-api:${jaxrsVersion}"
-    providedCompile jsonSchemaValidatorLibs
+  implementation 'javax.websocket:javax.websocket-api:1.1'
+    // implementation 'jakarta.ws.rs:jakarta.ws.rs-api:2.1.1'
+    implementation("jakarta.ws.rs:jakarta.ws.rs-api:4.0.0")
+
+
+    providedCompile "com.github.java-json-tools:json-schema-validator:2.2.14"
     providedCompile 'com.google.guava:guava:27.1-jre' // force newer Guava
     providedCompile "org.glassfish.jersey.media:jersey-media-json-jackson:2.22.1"
     providedCompile "org.glassfish.jersey.core:jersey-server:2.22.1"
-    api libraries.commons_lang
-    testImplementation libraries.restAssured
+    api libs.commonsLang3
+    testImplementation "io.rest-assured:rest-assured:5.4.0"
     providedCompile "org.glassfish.jersey.containers:jersey-container-servlet:2.22.1"
 }
 
@@ -19,12 +23,12 @@ jar {
     from 'src/main/webapp'
 }
 
-apply from: "${rootProject.projectDir}/jpos-app.gradle"
+// apply from: "${rootProject.projectDir}/jpos-app.gradle"
 
-test {
-    dependsOn('installApp')
-    workingDir = 'build/install/eeresttest'
-}
-installApp.dependsOn('war')
-dist.dependsOn('war')
+// test {
+//     dependsOn('installApp')
+//     workingDir = 'build/install/eeresttest'
+// }
+// installApp.dependsOn('war')
+// dist.dependsOn('war')
 

@@ -25,7 +25,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 import org.glassfish.jersey.jackson.JacksonFeature;
 import org.glassfish.jersey.server.ResourceConfig;
 
-import javax.ws.rs.ext.ContextResolver;
+import jakarta.ws.rs.ext.ContextResolver;
 
 public class App extends ResourceConfig {
     public App() {

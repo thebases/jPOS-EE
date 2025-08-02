@@ -3,7 +3,7 @@ description = 'jPOS-EE :: Testbed'
 apply plugin: 'war'
 
 dependencies {
-    api (libraries.jpos)  {
+    api (libs.jpos)  {
         exclude(module: 'junit')
         exclude(module: 'hamcrest-core')
     }
@@ -12,8 +12,11 @@ dependencies {
 
 }
 
-apply from: "${rootProject.projectDir}/jpos-app.gradle"
-
+// apply from: "${rootProject.projectDir}/jpos-app.gradle"
+ext.targetConfiguration = [
+  "env": "dev",
+  "version": "1.0.0"
+]
 war {
     exclude '**/*.ico'
     exclude '**/*.png'
@@ -26,6 +29,6 @@ war {
     )
 }
 
-installApp.dependsOn('war')
-dist.dependsOn('war')
+// installApp.dependsOn('war')
+// dist.dependsOn('war')
 

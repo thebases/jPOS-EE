@@ -3,10 +3,13 @@ description = 'jPOS-EE :: Rest'
 dependencies {
     api project(':modules:core')
     api project(':modules:txn')
-    api "javax.ws.rs:javax.ws.rs-api:${jaxrsVersion}"
-    api jsonSchemaValidatorLibs
-    api libraries.commons_lang
+  api "jakarta.ws.rs:jakarta.ws.rs-api:3.1.0"
+    api "com.github.java-json-tools:json-schema-validator:2.2.14"
+   implementation("jakarta.ws.rs:jakarta.ws.rs-api:4.0.0")
+    api libs.commonsLang3
 }
-
-apply from: "${rootProject.projectDir}/jpos-app.gradle"
+// installApp {
+//     // ...
+// }
+// apply from: "${rootProject.projectDir}/jpos-app.gradle"
 

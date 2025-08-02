@@ -34,6 +34,12 @@ include  ':modules:status'
 include  ':modules:rspace'
 include  ':modules:txn'
 include  ':modules:minigl'
+include  ':modules:eerest'
+include  ':modules:eeresttest'
+include  ':modules:rest-testbed'
+include ':modules:jetty'
+
+// include  ':modules:qi-core'
 // include  ':modules:dbtest'
 
 dependencyResolutionManagement {

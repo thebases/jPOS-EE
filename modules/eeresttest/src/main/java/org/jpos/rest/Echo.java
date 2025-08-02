@@ -20,11 +20,11 @@ package org.jpos.rest;
 
 import org.jpos.q2.Q2;
 
-import javax.ws.rs.GET;
-import javax.ws.rs.HeaderParam;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.*;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.HeaderParam;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.*;
 
 @Path("/echo")
 public class Echo extends RestSupport {

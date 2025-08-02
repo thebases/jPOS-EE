@@ -5,7 +5,7 @@ apply plugin: 'war'
 dependencies {
     api libraries.jpos
     api libraries.servlet_api
-    api "javax.ws.rs:javax.ws.rs-api:${jaxrsVersion}"
+    api "jakarta.ws.rs:jakarta.ws.rs-api:${jaxrsVersion}"
     api project(':modules:iso-http-server')
     providedCompile project(':modules:jetty')
 }

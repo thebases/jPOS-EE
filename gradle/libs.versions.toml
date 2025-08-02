@@ -30,6 +30,7 @@ ehCache = '3.10.8'
 hibernateValidator = '6.2.1.Final'
 kafkaClients = '4.0.0'
 
+
 [libraries]
 jpos = { module = "org.jpos:jpos", version.ref = "jpos" }
 commonsLang3 = { module = "org.apache.commons:commons-lang3", version.ref = "commonsLang3" }
@@ -70,6 +71,10 @@ ehCache = { module = 'org.ehcache:ehcache', version.ref = 'ehCache' }
 jcache = { module = 'org.hibernate:hibernate-jcache', version.ref = 'hibernate' }
 hibernateValidator = { module = 'org.hibernate:hibernate-validator', version.ref = 'hibernateValidator' }
 kafkaClients = { module = 'org.apache.kafka:kafka-clients', version.ref = 'kafkaClients' }
+
+jsonSchemaValidatorLibs = 'com.github.java-json-tools:json-schema-validator:2.2.14'
+
+
 
 [bundles]
 jackson = [

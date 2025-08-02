@@ -1,8 +1,19 @@
 description = 'jPOS-EE :: Jetty Web Module'
 
+ext {
+    jettyLibs = [
+        "org.eclipse.jetty:jetty-server:11.0.20",
+        "org.eclipse.jetty:jetty-servlet:11.0.20",
+        'org.eclipse.jetty:jetty-xml:11.0.20',
+        'org.eclipse.jetty:jetty-util:11.0.20'
+    ]
+    websocketApiVersion = '1.1'
+}
 dependencies {
     api project(':modules:core')
     api jettyLibs
     api "javax.websocket:javax.websocket-api:${websocketApiVersion}"
+
+
 }
 
